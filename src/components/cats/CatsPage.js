@@ -18,6 +18,33 @@ class CatsPage extends React.Component {
         <div className="col-md-4">
           <CatList cats={cats} />
         </div>
+        <table className="table">
+        <thead>
+          <tr>
+            <th className="col">Product ID</th>
+            <th className="col">Name</th>
+            <th className="col">Category</th>
+            <th className="col">Status</th>
+            <th className="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Product 1</td>
+            <td>firstClass</td>
+            <td>active</td>
+            <td>999.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Product 2</td>
+            <td>secondClass</td>
+            <td>active</td>
+            <td>666.00</td>
+          </tr>
+        </tbody>
+      </table>
         <div className="col-md-8">
           {this.props.children}
         </div>
