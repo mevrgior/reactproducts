@@ -5,6 +5,20 @@ import {bindActionCreators} from 'redux';
 import CatList from './CatList';
 import NewCatPage from './NewCatPage';
 
+class MyRow extends React.Component {
+  render() {
+    return(
+      <tr>
+        <td>{this.props.id}</td>
+        <td>{this.props.name}</td>
+        <td>{this.props.category}</td>
+        <td>{this.props.status}</td>
+        <td>{this.props.price}</td>
+      </tr>  
+    );
+  }
+}
+
 class CatsPage extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -12,6 +26,8 @@ class CatsPage extends React.Component {
 
   render() {
     const cats = this.props.cats;
+    const mylist = ['dsa', 'asdsd', 'hgfjkl'];
+    const enterrow = this._getProducts();
     return (
       <div className="col-md-12">
         <h1>Cats <Link to={'/cats/new'} className="btn btn-primary">+ cat</Link></h1>
@@ -29,20 +45,11 @@ class CatsPage extends React.Component {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Product 1</td>
-            <td>firstClass</td>
-            <td>active</td>
-            <td>999.00</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Product 2</td>
-            <td>secondClass</td>
-            <td>active</td>
-            <td>666.00</td>
-          </tr>
+          {/* <tr>
+            {mylist.map(myitem => <td>{myitem}</td>)}
+          </tr> */} 
+            {enterrow}
+          {/* <ProductList products={product} /> */}
         </tbody>
       </table>
         <div className="col-md-8">
@@ -50,6 +57,19 @@ class CatsPage extends React.Component {
         </div>
       </div>
     );
+  }
+  _getProducts() {
+    const productList = [
+      {id:1, name: 'Product1', category: 'first class', status: 'active', price: '999.00 €' },
+      {id:2, name: 'Product2', category: 'second class', status: 'active', price: '666.00 €' }
+    ];
+    return productList.map((product) => {
+      return (
+        <MyRow
+          id={product.id} name={product.name} category={product.category} status={product.status} price={product.price} key={product.id}
+        />
+      );
+    });
   }
 }
 
