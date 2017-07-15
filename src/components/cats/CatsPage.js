@@ -7,13 +7,24 @@ import NewCatPage from './NewCatPage';
 
 class MyRow extends React.Component {
   render() {
+    var rowStyle = {
+      backgroundColor: "red",
+      height: "50px",
+      color: "#6b6b6b",
+      fontWeight: "bold",
+      backgroundColor: "#d4d1d5",
+      borderBottom: "rgba(0, 0, 0, 0.05) 1px solid"
+    }
+    var thStyle = {
+      paddingLeft: "30px",
+    }
     return(
-      <tr>
-        <td>{this.props.id}</td>
-        <td>{this.props.name}</td>
-        <td>{this.props.category}</td>
-        <td>{this.props.status}</td>
-        <td>{this.props.price}</td>
+      <tr style={rowStyle}>
+        <td style={thStyle}>{this.props.id}</td>
+        <td style={thStyle}>{this.props.name}</td>
+        <td style={thStyle}>{this.props.category}</td>
+        <td style={thStyle}>{this.props.status}</td>
+        <td style={thStyle}>{this.props.price}</td>
       </tr>  
     );
   }
@@ -26,33 +37,49 @@ class CatsPage extends React.Component {
 
   render() {
     const cats = this.props.cats;
-    const mylist = ['dsa', 'asdsd', 'hgfjkl'];
+    // const mylist = ['dsa', 'asdsd', 'hgfjkl'];
     const enterrow = this._getProducts();
+    
+    var tableStyle = {
+      boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+      borderCollapse: "collapse"
+    }
+    var thStyle = {
+      paddingLeft: "30px",
+      textAlign: "left",
+      backgroundColor: "#63acb7",
+      color: "#f6f3f7",
+      fontWeight: "bold",
+      fontSize: "0.7em",
+      textTransform: "uppercase",
+      height: "30px"
+    }
+
     return (
-      <div className="col-md-12">
+      <div className="main">
         <h1>Cats <Link to={'/cats/new'} className="btn btn-primary">+ cat</Link></h1>
-        <div className="col-md-4">
+        <div className="main__block">
           <CatList cats={cats} />
         </div>
-        <table className="table">
-        <thead>
-          <tr>
-            <th className="col">Product ID</th>
-            <th className="col">Name</th>
-            <th className="col">Category</th>
-            <th className="col">Status</th>
-            <th className="col">Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* <tr>
-            {mylist.map(myitem => <td>{myitem}</td>)}
-          </tr> */} 
-            {enterrow}
-          {/* <ProductList products={product} /> */}
-        </tbody>
-      </table>
-        <div className="col-md-8">
+        <table className="table main__block" style={tableStyle}>
+          <thead>
+            <tr>
+              <th style={thStyle} className="col">Product ID</th>
+              <th style={thStyle} className="col">Name</th>
+              <th style={thStyle} className="col">Category</th>
+              <th style={thStyle} className="col">Status</th>
+              <th style={thStyle} className="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* <tr>
+              {mylist.map(myitem => <td>{myitem}</td>)}
+            </tr> */} 
+              {enterrow}
+            {/* <ProductList products={product} /> */}
+          </tbody>
+        </table>
+        <div className="main__block">
           {this.props.children}
         </div>
       </div>
