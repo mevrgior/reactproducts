@@ -49,7 +49,8 @@ class CatsPage extends React.Component {
       textAlign: "center",
       height: "30px",
       textTransform: "uppercase",
-      padding: "10px 5px 5px"
+      padding: "10px 5px 5px",
+      marginBottom: "40px"
     };
 
     return (
@@ -57,7 +58,7 @@ class CatsPage extends React.Component {
         <h1 className="main__title">Product List</h1>
         <div className="main__block">
           <Link to={'/cats/new'} style={linkButton} className="button">Add cat and soon product</Link>
-          <CatList cats={cats} /> 
+           
         </div>
         <table className="table main__block" style={tableStyle}>
           <thead>
@@ -77,6 +78,7 @@ class CatsPage extends React.Component {
         <div className="main__block">
           {this.props.children}
         </div>
+        <CatList cats={cats} />
       </div>
     );
   }
