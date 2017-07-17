@@ -21,7 +21,7 @@ class MyRow extends React.Component {
         <td style={thStyle} data-label={"Category"}>{this.props.category}</td>
         <td style={thStyle} data-label={"Status"}>{this.props.status}</td>
         <td style={thStyle} data-label={"Price"}>{this.props.price}</td>
-        <td><Link to={'/cats/' + '1'}>Edit</Link></td>
+        <td><Link to={'/cats/' + '1'}>Show</Link></td>
       </tr>  
     );
   }

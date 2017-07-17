@@ -8,7 +8,7 @@ const Footer = () => {
       <nav className="menu left">
         <IndexLink to="/" className="menu__item" activeClassName="active">Business</IndexLink>
         <Link to="/cats" className="menu__item" activeClassName="active">Cats</Link>
-        <Link to="/about" className="menu__item" activeClassName="active">About</Link>
+        {/* <Link to="/about" className="menu__item" activeClassName="active">About</Link> */}
       </nav>
       <div className="menu right">
         <a className="menu__item" href="#">
