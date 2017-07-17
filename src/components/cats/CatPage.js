@@ -81,7 +81,7 @@ class CatPage extends React.Component {
   render() {
     if (this.state.isEditing) {
       return (
-      <div>
+      <div className="main__block__form">
         <h1>edit cat</h1>
         <CatForm 
           cat={this.state.cat} 
@@ -94,14 +94,14 @@ class CatPage extends React.Component {
       )
     }
     return (
-      <div className="col-md-8 col-md-offset-2">
+      <div className="main__block__form">
         <h1>{this.state.cat.name}</h1>
-        <p>breed: {this.state.cat.breed}</p>
-        <p>weight: {this.state.cat.weight}</p>
-        <p>temperament: {this.state.cat.temperament}</p>
+        <p className="item-details" >breed: {this.state.cat.breed}</p>
+        <p className="item-details">weight: {this.state.cat.weight}</p>
+        <p className="item-details">temperament: {this.state.cat.temperament}</p>
         <HobbyList hobbies={this.state.catHobbies} />
-        <button onClick={this.toggleEdit} className="btn btn-default  ">edit</button>
-        <button onClick={this.deleteCat} className="btn btn-default  ">delete</button>
+        <button onClick={this.toggleEdit} className="button">edit</button>
+        <button onClick={this.deleteCat} className="button">delete</button>
       </div>
     );
   }

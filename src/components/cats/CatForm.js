@@ -49,7 +49,7 @@ class CatForm extends React.Component {
             type="submit"
             disabled={this.props.saving}
             value={this.props.saving ? 'Saving...' : 'Save'}
-            className="btn btn-primary"
+            className="button"
             onClick={this.props.onSave}/>
         </form>
       </div>

@@ -7,7 +7,7 @@
 
 class CatsApi {
   static getAllCats() {
-    return fetch('http://localhost:5000/api/v1/cats').then(response => {
+    return fetch('http://localhost:3000/api/v1/products',{mode: 'no-cors'}).then(response => {
       return response.json();
     }).catch(error => {
       return error;
@@ -32,7 +32,7 @@ class CatsApi {
   }
 
   static createCat(cat) {
-    const request = new Request('http://localhost:5000/api/v1/cats/', {
+    const request = new Request('http://localhost:3000/api/v1/products', {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json'

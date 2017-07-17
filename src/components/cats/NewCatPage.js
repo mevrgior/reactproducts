@@ -57,8 +57,8 @@ class NewCatPage extends React.Component {
   
   render() {
     return (
-      <div>
-        <h1>new cat</h1>
+      <div className="main__block__form">
+        <h1>New Form</h1>
         <CatForm 
           cat={this.state.cat} 
           hobbies={this.props.checkBoxHobbies}

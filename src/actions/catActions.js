@@ -6,15 +6,15 @@ export function loadCatsSuccess(cats) {
 }
 
 export function updateCatSuccess(cat) {
-  return {type: types.UPDATE_CAT_SUCCESS, cat}
+  return {type: types.UPDATE_CAT_SUCCESS, cat};
 }
 
 export function createCatSuccess(cat) {
-  return {type: types.CREATE_CAT_SUCCESS, cat}
+  return {type: types.CREATE_CAT_SUCCESS, cat};
 }
 
 export function deleteCatSuccess(cat) {
-  return {type: types.DELETE_CAT_SUCCESS, cat}
+  return {type: types.DELETE_CAT_SUCCESS, cat};
 }
 
 export function loadCats() {
@@ -52,13 +52,13 @@ export function createCat(cat) {
 export function deleteCat(cat) {
   return function(dispatch) {
     return catApi.deleteCat(cat).then(() => {
-      console.log(`Deleted ${cat.id}`)
+      console.log(`Deleted ${cat.id}`);
       dispatch(deleteCatSuccess(cat));
       return;
     }).catch(error => {
       throw(error);
-    })
-  }
+    });
+  };
 }
 
 
