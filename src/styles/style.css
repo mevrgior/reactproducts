@@ -11,8 +11,54 @@ h1 {
 .main {
     width: 80%;
     margin: 0 auto;
+    min-height: calc(100vh - 126px);
 }
-
+.main__title {
+    padding: 20px 0 10px;
+    /*text-align: center;*/
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(107, 107, 107);
+}
 .main__block {
     width: 100%;
+}
+
+/* Menu  */
+
+.menu {
+    background-color: #418a95;
+}
+
+.menu__item {
+    color: #f6f3f7;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: inline-block;
+    padding: 20px 30px;
+
+}
+.menu__item:hover {
+    background-color: #3A7B85;
+}
+
+.menu__item:focus {
+    outline: none;
+}
+
+/* Header Footer  */
+
+.header, .footer {
+    overflow: hidden;
+    background-color: #418a95;
+}
+
+/* helpers  */
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
 }
