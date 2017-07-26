@@ -8,8 +8,9 @@ class HomePage extends React.Component {
       height: "30px",
       textTransform: "uppercase",
       padding: "10px 5px 5px",
-      margin: "0",
+      margin: "0"
     };
+    
     return (
       <div className="main">
         <div className="main__block">
@@ -23,7 +24,7 @@ class HomePage extends React.Component {
               <li> try to use the API products instead of a "const = producList" in the CatsPage </li>
             </ul>  
           </p>
-          <Link to='/cats' style={homeButton} className="button">take a look</Link>
+          <Link to="/cats" style={homeButton} className="mybutton">take a look</Link>
         </div>
       </div>
     );

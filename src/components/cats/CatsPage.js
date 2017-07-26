@@ -9,6 +9,20 @@ import MyRow from './MyRow';
 class CatsPage extends React.Component {
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      items: [
+        {
+          id: 1,
+          title: 'List item 1'
+        },
+        {
+          id: 2,
+          title: 'List item 2'
+        }
+      ],
+      hasErrored: false,
+      isLoading: false
+    };
   }
 
   _getProducts() {
@@ -52,12 +66,17 @@ class CatsPage extends React.Component {
       padding: "10px 5px 5px",
       marginBottom: "40px"
     };
-
+    if (this.state.hasErrored) {
+        return <p>Sorry! There was an error loading the items</p>;
+        }
+    if (this.state.isLoading) {
+        return <p>Loading…</p>;
+    }
     return (
       <div className="main">
         <h1 className="main__title">Product List</h1>
         <div className="main__block">
-          <Link to={'/cats/new'} style={linkButton} className="button">Add cat and soon product</Link>
+          <Link to={'/cats/new'} style={linkButton} className="mybutton">Add cat and soon product</Link>
            
         </div>
         <table className="table main__block" style={tableStyle}>
@@ -79,6 +98,13 @@ class CatsPage extends React.Component {
           {this.props.children}
         </div>
         <CatList cats={cats} />
+        <ul>
+            {this.state.items.map((item) => (
+                <li key={item.id}>
+                    {item.title}
+                </li>
+            ))}
+        </ul>
       </div>
     );
   }

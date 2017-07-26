@@ -10,8 +10,8 @@ class CatForm extends React.Component {
 
   makeCheckBoxes() {
     return this.props.hobbies.map(hobby => {
-      return <CheckBox item={hobby} handleChange={this.props.onHobbyChange} key={hobby.id}/>
-    })
+      return <CheckBox item={hobby} handleChange={this.props.onHobbyChange} key={hobby.id}/>;
+    });
   }
 
   render() {
@@ -49,7 +49,7 @@ class CatForm extends React.Component {
             type="submit"
             disabled={this.props.saving}
             value={this.props.saving ? 'Saving...' : 'Save'}
-            className="button"
+            className="mybutton"
             onClick={this.props.onSave}/>
         </form>
       </div>

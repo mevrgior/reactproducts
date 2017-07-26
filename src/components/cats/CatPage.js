@@ -71,7 +71,7 @@ class CatPage extends React.Component {
   } 
 
   deleteCat(event) {
-    this.props.actions.deleteCat(this.state.cat)
+    this.props.actions.deleteCat(this.state.cat);
   }
 
   redirect() {
@@ -91,7 +91,7 @@ class CatPage extends React.Component {
           onHobbyChange={this.updateCatHobbies}
           saving={this.state.saving}/> 
       </div>
-      )
+      );
     }
     return (
       <div className="main__block__form">
@@ -100,8 +100,8 @@ class CatPage extends React.Component {
         <p className="item-details">weight {this.state.cat.weight}</p>
         <p className="item-details">temperament {this.state.cat.temperament}</p>
         <HobbyList hobbies={this.state.catHobbies} />
-        <button onClick={this.toggleEdit} className="button">edit</button>
-        <button onClick={this.deleteCat} className="button">delete</button>
+        <button onClick={this.toggleEdit} className="mybutton">edit</button>
+        <button onClick={this.deleteCat} className="mybutton">delete</button>
       </div>
     );
   }
@@ -116,8 +116,8 @@ CatPage.propTypes = {
 };
 
 function getCatById(cats, id) {
-  let cat = cats.find(cat => cat.id == id)
-  return Object.assign({}, cat)
+  let cat = cats.find(cat => cat.id == id);
+  return Object.assign({}, cat);
 }
 
 function hobbiesForCheckBoxes(hobbies, cat=null) {
@@ -136,12 +136,12 @@ function collectCatHobbies(hobbies, cat) {
     if (cat.hobby_ids.filter(hobbyId => hobbyId == hobby.id).length > 0) {
       return hobby;
     }
-  })
-  return selected.filter(el => el != undefined)
+  });
+  return selected.filter(el => el != undefined);
 }
 
 function mapStateToProps(state, ownProps) {
-  const stateHobbies = Object.assign([], state.hobbies)
+  const stateHobbies = Object.assign([], state.hobbies);
   let checkBoxHobbies = [];
   let catHobbies = [];
   let cat = {name: '', breed: '', weight: '', temperament: '', hobby_ids: []};
@@ -152,7 +152,7 @@ function mapStateToProps(state, ownProps) {
       checkBoxHobbies = hobbiesForCheckBoxes(stateHobbies, cat);
       catHobbies = collectCatHobbies(stateHobbies, cat);
     } else {
-      checkBoxHobbies = hobbiesForCheckBoxes(stateHobbies)
+      checkBoxHobbies = hobbiesForCheckBoxes(stateHobbies);
     }
   } 
     return {cat: cat, checkBoxHobbies: checkBoxHobbies, catHobbies: catHobbies};

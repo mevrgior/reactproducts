@@ -1,8 +1,7 @@
-
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     background-color: #f5f4f5; 
 }
 
@@ -190,7 +189,7 @@ input, .item-details {
     font-size: 18px;
     color: rgb(107, 107, 107);  
 }
-.button {
+.mybutton {
     width: 100%;
     height: 30px;
     margin: 10px auto;
@@ -204,16 +203,16 @@ input, .item-details {
     background-color: rgb(99, 172, 183);
     color: rgb(246, 243, 247);
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     transition: background-color .3s;
 }
 
-.button:hover, .button:focus {
+.mybutton:hover, .mybutton:focus {
     background-color: #3A7B85;
 }
 @media (min-width: 678px) {
 
-    .button {
+    .mybutton {
         width: 20%;
     }
 }
