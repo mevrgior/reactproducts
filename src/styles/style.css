@@ -78,7 +78,9 @@ h1 {
     float: right;
 }
 /* table  */
-
+table {
+    border-collapse: collapse;
+}
 tbody,
 tr,
 th
@@ -89,7 +91,12 @@ th
     white-space: normal;
 }
 .table__row {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    
+    color: #6b6b6b;
+    font-weight: bold;
+    background-color: #d4d1d5;
+    border-bottom: rgba(0, 0, 0, 0.05) 1px solid;
 }
 .table__row td:before {
         content: attr(data-label);

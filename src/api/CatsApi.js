@@ -7,7 +7,7 @@
 
 class CatsApi {
   static getAllCats() {
-    return fetch('http://localhost:3000/api/v1/products',{mode: 'no-cors'}).then(response => {
+    return fetch('http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products/').then(response => {
       return response.json();
     }).catch(error => {
       return error;
@@ -15,7 +15,7 @@ class CatsApi {
   }
 
   static updateCat(cat) {
-    const request = new Request(`http://localhost:5000/api/v1/cats/${cat.id}`, {
+    const request = new Request(`http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products/${cat.id}`, {
       method: 'PUT',
       headers: new Headers({
         'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ class CatsApi {
   }
 
   static createCat(cat) {
-    const request = new Request('http://localhost:3000/api/v1/products', {
+    const request = new Request('http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products', {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ class CatsApi {
   }
 
   static deleteCat(cat) {
-    const request = new Request(`http://localhost:5000/api/v1/cats/${cat.id}`, {
+    const request = new Request(`http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products/${cat.id}`, {
       method: 'DELETE'
     });
 

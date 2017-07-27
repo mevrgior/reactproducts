@@ -5,10 +5,10 @@ import CatPage from './CatPage';
 class MyRow extends React.Component {
   render() {
     var rowStyle = {
-      color: "#6b6b6b",
-      fontWeight: "bold",
-      backgroundColor: "#d4d1d5",
-      borderBottom: "rgba(0, 0, 0, 0.05) 1px solid"
+      // color: "#6b6b6b",
+      // fontWeight: "bold",
+      // backgroundColor: "#d4d1d5",
+      // borderBottom: "rgba(0, 0, 0, 0.05) 1px solid"
     };
     var thStyle = {
       //paddingLeft: "30px"

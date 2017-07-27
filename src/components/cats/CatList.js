@@ -3,10 +3,16 @@ import CatListRow from './CatListRow';
 
 const CatList = ({cats}) => {
   return (
-    <table className="table">
+    <table className="table main__block">
       <thead>
         <tr>
-          <th>Name</th>
+          <th className="table__th">Product ID</th>
+          <th className="table__th">Name</th>
+          <th className="table__th">Category</th>
+          <th className="table__th">Price</th>
+          <th className="table__th">Is Active</th>
+          <th className="table__th">Breed</th>
+          <th className="table__th">Actions</th>
         </tr>
       </thead>
       <tbody>

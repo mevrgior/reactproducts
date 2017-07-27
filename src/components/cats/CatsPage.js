@@ -11,19 +11,30 @@ class CatsPage extends React.Component {
     super(props, context);
     this.state = {
       items: [
-        {
-          id: 1,
-          title: 'List item 1'
-        },
-        {
-          id: 2,
-          title: 'List item 2'
-        }
       ],
-      hasErrored: false,
-      isLoading: false
     };
   }
+//   fetchData(url) {
+//     this.setState({ isLoading: true });
+
+//     fetch(url)
+//         .then((response) => {
+//             if (!response.ok) {
+//                 throw Error(response.statusText);
+//             }
+
+//             this.setState({ isLoading: false });
+
+//             return response;
+//         })
+//         .then((response) => response.json())
+//         .then((items) => this.setState({ items })) // ES6 property value shorthand for { items: items }
+//         .catch(() => this.setState({ hasErrored: true }));
+// }
+//   componentDidMount () {
+//     console.log('mounted!');
+//     this.fetchData('http://5826ed963900d612000138bd.mockapi.io/items');
+//   }
 
   _getProducts() {
     const productList = [
@@ -79,6 +90,10 @@ class CatsPage extends React.Component {
           <Link to={'/cats/new'} style={linkButton} className="mybutton">Add cat and soon product</Link>
            
         </div>
+        <div className="main__block">
+          {this.props.children}
+        </div>
+        <CatList cats={cats} />
         <table className="table main__block" style={tableStyle}>
           <thead>
             <tr>
@@ -94,17 +109,6 @@ class CatsPage extends React.Component {
             {enterrow}
           </tbody>
         </table>
-        <div className="main__block">
-          {this.props.children}
-        </div>
-        <CatList cats={cats} />
-        <ul>
-            {this.state.items.map((item) => (
-                <li key={item.id}>
-                    {item.title}
-                </li>
-            ))}
-        </ul>
       </div>
     );
   }

@@ -95,7 +95,8 @@ class CatPage extends React.Component {
     }
     return (
       <div className="main__block__form">
-        <h1>{this.state.cat.name}</h1>
+        <h1>Name: {this.state.cat.name}</h1>
+        <p className="item-details" >id {this.state.cat.id}</p>
         <p className="item-details" >breed {this.state.cat.breed}</p>
         <p className="item-details">weight {this.state.cat.weight}</p>
         <p className="item-details">temperament {this.state.cat.temperament}</p>
