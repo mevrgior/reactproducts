@@ -11,7 +11,7 @@ class CatsPage extends React.Component {
     super(props, context);
     this.state = {
       items: [
-      ],
+      ]
     };
   }
 //   fetchData(url) {
@@ -94,7 +94,7 @@ class CatsPage extends React.Component {
           {this.props.children}
         </div>
         <CatList cats={cats} />
-        <table className="table main__block" style={tableStyle}>
+        {/* <table className="table main__block" style={tableStyle}>
           <thead>
             <tr>
               <th style={thStyle} className="table__th">Product ID</th>
@@ -108,7 +108,7 @@ class CatsPage extends React.Component {
           <tbody>
             {enterrow}
           </tbody>
-        </table>
+        </table> */}
       </div>
     );
   }

@@ -52,7 +52,6 @@ export function createCat(cat) {
 export function deleteCat(cat) {
   return function(dispatch) {
     return catApi.deleteCat(cat).then(() => {
-      console.log(`Deleted ${cat.id}`);
       dispatch(deleteCatSuccess(cat));
       return;
     }).catch(error => {

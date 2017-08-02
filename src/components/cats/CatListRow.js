@@ -9,8 +9,7 @@ const CatListRow = ({cat}) => {
       <td data-label={"Name"}><Link to={'/cats/' + cat.id}>{cat.name}</Link></td>
       <td data-label={"Category"}>{cat.category}</td>
       <td data-label={"Price"}>{cat.price}</td>
-      <td data-label={"Status"} >{cat.active}</td>
-      <td data-label={"Breed"} >{cat.breed}</td>
+      <td data-label={"Status"} >{cat.status}</td>
       <td><Link to={'/cats/' + cat.id}>Show</Link></td>
     </tr>
   );

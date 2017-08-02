@@ -7,7 +7,7 @@
 
 class CatsApi {
   static getAllCats() {
-    return fetch('http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products/').then(response => {
+    return fetch('http://59819144139db000114a2d81.mockapi.io/api/v1/cats').then(response => {
       return response.json();
     }).catch(error => {
       return error;
@@ -15,12 +15,12 @@ class CatsApi {
   }
 
   static updateCat(cat) {
-    const request = new Request(`http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products/${cat.id}`, {
+    const request = new Request(`http://59819144139db000114a2d81.mockapi.io/api/v1/cats/${cat.id}`, {
       method: 'PUT',
       headers: new Headers({
         'Content-Type': 'application/json'
       }), 
-      body: JSON.stringify({cat: cat})
+      body: JSON.stringify({cat})
     });
 
 
@@ -32,12 +32,12 @@ class CatsApi {
   }
 
   static createCat(cat) {
-    const request = new Request('http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products', {
+    const request = new Request('http://59819144139db000114a2d81.mockapi.io/api/v1/cats', {
       method: 'POST',
       headers: new Headers({
         'Content-Type': 'application/json'
       }), 
-      body: JSON.stringify({cat: cat})
+      body: JSON.stringify({cat})
     });
 
 
@@ -49,7 +49,7 @@ class CatsApi {
   }
 
   static deleteCat(cat) {
-    const request = new Request(`http://5978ffd78f22b00011d6f1a2.mockapi.io/api/v1/products/${cat.id}`, {
+    const request = new Request(`http://59819144139db000114a2d81.mockapi.io/api/v1/cats/${cat.id}`, {
       method: 'DELETE'
     });
 
