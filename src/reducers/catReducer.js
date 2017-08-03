@@ -7,8 +7,8 @@ export default function catReducer(state = initialState.cats, action) {
   // state variable here reps just an array of courses
   switch(action.type) {
     case types.LOAD_CATS_SUCCESS:
-      // return action.cats;
-     // return action.cats.map(cat => Object.assign({}, cat, Object.assign([], cat.hobby_ids)))
+       //return action.cats;
+       //return action.cats.map(cat => Object.assign({}, cat, Object.assign([], cat.hobby_ids)))
      return Object.assign([], state, action.cats)
     case types.CREATE_CAT_SUCCESS:
       browserHistory.push(`/cats/${action.cat.id}`)

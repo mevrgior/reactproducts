@@ -10,6 +10,7 @@ const CatListRow = ({cat}) => {
       <td data-label={"Category"}>{cat.category}</td>
       <td data-label={"Price"}>{cat.price}</td>
       <td data-label={"Status"} >{cat.status}</td>
+      <td data-label={"Breed"} >{cat.breed}</td>
       <td><Link to={'/cats/' + cat.id}>Show</Link></td>
     </tr>
   );

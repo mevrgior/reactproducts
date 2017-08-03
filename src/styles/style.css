@@ -216,11 +216,12 @@ input, .item-details {
 
 .mybutton:hover, .mybutton:focus {
     background-color: #3A7B85;
+    color: rgb(246, 243, 247);
 }
 @media (min-width: 678px) {
 
     .mybutton {
-        width: 20%;
+        width: 30%;
     }
 }
 

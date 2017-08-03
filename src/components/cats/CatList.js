@@ -11,6 +11,7 @@ const CatList = ({cats}) => {
           <th className="table__th">Category</th>
           <th className="table__th">Price</th>
           <th className="table__th">Status</th>
+          <th className="table__th">Breed</th>
           <th className="table__th">Actions</th>
         </tr>
       </thead>

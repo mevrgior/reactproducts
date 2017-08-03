@@ -20,7 +20,7 @@ class CatsApi {
       headers: new Headers({
         'Content-Type': 'application/json'
       }), 
-      body: JSON.stringify({cat})
+      body: JSON.stringify({cat: cat})
     });
 
 
@@ -37,7 +37,7 @@ class CatsApi {
       headers: new Headers({
         'Content-Type': 'application/json'
       }), 
-      body: JSON.stringify({cat})
+      body: JSON.stringify({cat: cat})
     });
 
 
