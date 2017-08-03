@@ -68,6 +68,8 @@ class CatPage extends React.Component {
     event.preventDefault();
     this.setState({saving: true});
     this.props.actions.updateCat(this.state.cat);
+    alert("The Record has been updated.");
+
 
   } 
 
@@ -97,6 +99,8 @@ class CatPage extends React.Component {
     console.log("ARGG: "+ JSON.stringify(this.props.cat));
     return (
       <div className="main__block__form">
+        <button onClick={this.toggleEdit} className="mybutton">edit</button>
+        <button onClick={this.deleteCat} className="mybutton">delete</button>
         <h1>Name: {this.state.cat.name}</h1>
         <p className="item-details" >ID: {this.state.cat.id}</p>
         <p className="item-details" >Category: {this.state.cat.category}</p>
@@ -106,8 +110,7 @@ class CatPage extends React.Component {
         <p className="item-details">Weight: {this.state.cat.weight}</p>
         <p className="item-details">Temperament: {this.state.cat.temperament}</p>
          {/* <HobbyList hobbies={this.state.catHobbies} />  */}
-        <button onClick={this.toggleEdit} className="mybutton">edit</button>
-        <button onClick={this.deleteCat} className="mybutton">delete</button>
+        
       </div>
     );
   }

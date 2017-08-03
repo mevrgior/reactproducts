@@ -19,6 +19,13 @@ class CatForm extends React.Component {
     return (
       <div>
         <form>
+          <input
+            type="submit"
+            disabled={this.props.saving}
+            value={this.props.saving ? 'Saving...' : 'Save'}
+            className="mybutton"
+            onClick={this.props.onSave}/>
+          {/* <p className="notify"> The Record has been updated </p> */}
           <TextInput
             name="name"
             label="Name"
@@ -63,12 +70,7 @@ class CatForm extends React.Component {
             value={this.props.cat.temperament}
             onChange={this.props.onChange}/>
 
-          <input
-            type="submit"
-            disabled={this.props.saving}
-            value={this.props.saving ? 'Saving...' : 'Save'}
-            className="mybutton"
-            onClick={this.props.onSave}/>
+          
         </form>
       </div>
   );
